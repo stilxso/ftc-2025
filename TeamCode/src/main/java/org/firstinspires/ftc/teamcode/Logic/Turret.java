@@ -56,4 +56,9 @@ public class Turret {
         rightShooter.setPower(power);
 
     }
+
+    public void stopTurret(){
+        leftShooter.setPower(0);
+        rightShooter.setPower(0);
+    }
 }

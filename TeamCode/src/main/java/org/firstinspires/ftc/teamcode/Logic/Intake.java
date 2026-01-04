@@ -26,4 +26,9 @@ public class Intake {
         intake.setPower(1);
         roller.setPower(1);
     }
+
+    public void stop(){
+        intake.setPower(0);
+        roller.setPower(0);
+    }
 }
