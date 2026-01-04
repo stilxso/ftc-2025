@@ -32,12 +32,12 @@ public class Turret {
         rightShooter.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.BRAKE);
 
         rpmLUT = new InterpLUT();
-        rpmLUT.add(0.5, 1500);
-        rpmLUT.add(1.0, 2000);
-        rpmLUT.add(1.5, 2400);
-        rpmLUT.add(2.0, 2800);
-        rpmLUT.add(2.5, 3200);
-        rpmLUT.add(3.0, 3500);
+        rpmLUT.add(0.5, 1100);
+        rpmLUT.add(1.0, 1300);
+        rpmLUT.add(1.5, 1400);
+        rpmLUT.add(2.0, 1500);
+        rpmLUT.add(2.5, 1600);
+        rpmLUT.add(3.0, 1700);
         rpmLUT.createLUT();
     }
 

@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode.OpMode;
 
 import com.pedropathing.follower.Follower;
+import com.pedropathing.geometry.Pose;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
 import org.firstinspires.ftc.teamcode.Logic.Intake;
@@ -16,6 +17,9 @@ public class TeleOp extends OpMode {
     @Override
     public void init() {
         follower = Constants.createFollower(hardwareMap);
+        follower.setStartingPose(new Pose(132, 100, 0));
+        turret = new Turret(hardwareMap);
+        intake = new Intake(hardwareMap);
     }
 
     @Override
@@ -35,6 +39,7 @@ public class TeleOp extends OpMode {
                 -gamepad1.left_stick_y,
                 -gamepad1.right_stick_x
         );
+
 
         if(gamepad1.left_trigger > 0.5){
             double distance = Math.hypot(140 - x, 140 - y);
